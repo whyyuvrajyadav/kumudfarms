@@ -24,7 +24,7 @@ section{padding:56px 0}
 .btn:hover{background:var(--c);border-color:var(--c);color:var(--d)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:32px}
 .grid>div{border-top:3px solid var(--o);padding-top:14px}
-.band a{color:var(--o)}
+.band a{color:var(--o)}.band .btn{color:var(--d)}
 .pr{max-width:38em}
 .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:48px;align-items:start}
 @media(max-width:720px){.two{grid-template-columns:1fr;gap:28px}section{padding:40px 0}}
