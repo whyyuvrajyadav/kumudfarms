@@ -24,6 +24,9 @@ section{padding:56px 0}
 .fl a,dl a{display:inline-flex;align-items:center;gap:6px}
 .btn.s{background:none;color:inherit;border-color:currentColor}
 .btn:hover{background:var(--c);border-color:var(--c);color:var(--d)}
+.btn[href*="wa.me"],.btn[href*="wa.me"]:hover{background:#25D366;border-color:#25D366;color:#ffffff}
+.btn[href*="wa.me"] .ico{fill:#ffffff}
+.band .btn[href*="wa.me"]{color:#ffffff}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:32px}
 .grid>div{border-top:3px solid var(--o);padding-top:14px}
 .band a{color:var(--o)}.band .btn{color:var(--d)}
