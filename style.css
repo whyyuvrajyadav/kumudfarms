@@ -51,3 +51,8 @@ img{max-width:100%;height:auto;display:block}
 table{border-collapse:collapse;width:100%;margin:0 0 24px}
 caption{text-align:left;font-weight:600;padding-bottom:6px}
 th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--o)}
+.gallery{display:flex;flex-direction:column;gap:12px}
+.gallery .pic-main{width:100%}
+.gallery-thumbs{display:flex;gap:10px;overflow-x:auto}
+.gallery-thumbs img{width:80px;height:80px;object-fit:cover;border:2px solid transparent;border-radius:4px;cursor:pointer;opacity:.6;transition:opacity .2s,border-color .2s}
+.gallery-thumbs img:hover,.gallery-thumbs img.active{opacity:1;border-color:var(--o)}
