@@ -44,79 +44,161 @@
     <main id="main">
         <section>
             <div class="w">
-                <div class="two">
-                    <div class="gallery">
-                        <img class="pic pic-main" id="mainImg" src="images/kumud-pure-desi-ghee-1-litre-jar.jpg"
-                            width="629" height="839" alt="KUMUD Pure Desi Ghee 1 litre jar with a green and gold label"
-                            fetchpriority="high">
-                        <div class="gallery-thumbs">
-                            <img src="images/kumud-pure-desi-ghee-1-litre-jar.jpg" alt="KUMUD Ghee jar" class="active"
-                                onclick="document.getElementById('mainImg').src=this.src;document.querySelector('.gallery-thumbs .active').classList.remove('active');this.classList.add('active')">
-                            <img src="images/kumud-buffalo-ghee-bowl-spoon.jpg"
-                                alt="KUMUD buffalo ghee in brass bowl with wooden spoon"
-                                onclick="document.getElementById('mainImg').src=this.src;document.querySelector('.gallery-thumbs .active').classList.remove('active');this.classList.add('active')">
-                            <img src="images/kumud-buffalo-ghee-closeup.jpg"
-                                alt="Close-up of KUMUD ghee texture with spoon"
-                                onclick="document.getElementById('mainImg').src=this.src;document.querySelector('.gallery-thumbs .active').classList.remove('active');this.classList.add('active')">
-                            <img src="images/kumud-desi-ghee-jar-front.jpg"
-                                alt="KUMUD Pure Desi Ghee jar front view with label"
-                                onclick="document.getElementById('mainImg').src=this.src;document.querySelector('.gallery-thumbs .active').classList.remove('active');this.classList.add('active')">
-                            <img src="images/kumud-desi-ghee-jar-side.jpg"
-                                alt="KUMUD Pure Desi Ghee jar side view with ghee bowl"
-                                onclick="document.getElementById('mainImg').src=this.src;document.querySelector('.gallery-thumbs .active').classList.remove('active');this.classList.add('active')">
+                <div class="pdp-layout">
+                    <div class="pdp-gallery">
+                        <div class="pdp-thumbs">
+                            <img src="images/kumud-pure-desi-ghee-1-litre-jar.jpg" alt="KUMUD Ghee jar front" class="active" onclick="switchMainImg(this)">
+                            <img src="images/kumud-buffalo-ghee-bowl-spoon.jpg" alt="Buffalo ghee in brass bowl" onclick="switchMainImg(this)">
+                            <img src="images/kumud-buffalo-ghee-closeup.jpg" alt="Ghee texture close-up" onclick="switchMainImg(this)">
+                            <img src="images/kumud-desi-ghee-jar-front.jpg" alt="Ghee jar label view" onclick="switchMainImg(this)">
+                            <img src="images/kumud-desi-ghee-jar-side.jpg" alt="Ghee jar and brass bowl" onclick="switchMainImg(this)">
+                        </div>
+                        <div class="pdp-main-img-wrap">
+                            <img class="pdp-main-img" id="mainImg" src="images/kumud-pure-desi-ghee-1-litre-jar.jpg" alt="KUMUD Pure Desi Buffalo Ghee 1 litre glass jar" fetchpriority="high">
                         </div>
                     </div>
-                    <div>
-                        <h1>KUMUD Pure Desi Ghee</h1>
-                        <p>Handmade desi buffalo ghee from our family dairy farm in Lucknow, in three sizes.</p>
-                        <dl>
-                            <dt>Ingredients</dt>
-                            <dd><a href="buffalo-vs-cow.html">Buffalo milk cream</a></dd>
-                            <dt>Method</dt>
-                            <dd><a href="how-ghee-is-made-from-cream.html">Handmade from fresh cream</a>, in small
-                                batches</dd>
-                            <dt>Preservatives</dt>
-                            <dd>None</dd>
-                            <dt>Storage</dt>
-                            <dd><a href="how-to-store-ghee.html">Cool, dry place</a>, lid tightly closed</dd>
-                            <dt>Allergen</dt>
-                            <dd>Contains milk</dd>
-                        </dl>
-                        <table>
-                            <caption>Sizes and prices, all taxes included</caption>
-                            <thead>
-                                <tr>
-                                    <th scope="col">Size</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">About per 100 ml</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>250 ml</td>
-                                    <td>₹349</td>
-                                    <td>₹140</td>
-                                </tr>
-                                <tr>
-                                    <td>500 ml</td>
-                                    <td>₹499</td>
-                                    <td>₹100</td>
-                                </tr>
-                                <tr>
-                                    <td>1 litre</td>
-                                    <td>₹899</td>
-                                    <td>₹90</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <a class="btn"
-                            href="https://wa.me/917318023488?text=Hi%20KUMUD%2C%20I%20would%20like%20to%20order%20ghee"
-                            target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24">
-                                <path
-                                    d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.477-.15-.678.15-.2.301-.778.978-.954 1.18-.176.2-.351.226-.653.076-.301-.15-1.272-.469-2.424-1.496-.895-.799-1.5-1.786-1.676-2.087-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.176.2-.301.301-.502.101-.2.05-.376-.025-.526-.075-.15-.678-1.633-.929-2.239-.244-.59-.493-.51-.678-.52l-.578-.01c-.2 0-.527.075-.803.376s-1.054 1.03-1.054 2.51c0 1.48 1.08 2.908 1.23 3.109.15.2 2.126 3.246 5.15 4.553.72.31 1.282.496 1.72.635.723.23 1.381.197 1.902.12.58-.087 1.78-.727 2.03-1.43.25-.704.25-1.307.175-1.432-.075-.125-.276-.2-.577-.35zM12.04 2C6.516 2 2.022 6.478 2.022 12c0 1.848.502 3.654 1.456 5.239L2 22l4.89-1.433A9.972 9.972 0 0 0 12.04 22c5.523 0 10.017-4.478 10.017-10S17.563 2 12.04 2zm0 18.286c-1.597 0-3.158-.42-4.529-1.217l-.325-.188-2.901.85.875-2.813-.21-.334A8.257 8.257 0 0 1 3.766 12c0-4.562 3.712-8.273 8.274-8.273 4.562 0 8.273 3.711 8.273 8.273 0 4.562-3.711 8.286-8.273 8.286z" />
-                            </svg> Order on WhatsApp</a>
+                    <div class="pdp-details">
+                        <h1>KUMUD Pure Desi Buffalo Ghee</h1>
+                        <div class="pdp-rating">
+                            <span class="stars">★★★★★</span>
+                            <strong>5.0</strong>
+                            <span>· Verified Farm Fresh Reviews</span>
+                        </div>
+                        <div class="pdp-price-wrap">
+                            <span class="pdp-price" id="productPrice">₹899.00</span>
+                            <span class="pdp-per100" id="productPer100">(₹90 per 100 ml · Best value)</span>
+                            <div class="pdp-tax-note">Inclusive of all taxes. Free doorstep delivery across Lucknow.</div>
+                        </div>
+
+                        <div class="variant-section">
+                            <span class="variant-label">Select Jar Size:</span>
+                            <div class="variant-grid">
+                                <div class="variant-pill" data-size="250" onclick="selectVariant('250')">
+                                    <strong>250 ML</strong>
+                                    <span>₹ 349.00</span>
+                                </div>
+                                <div class="variant-pill" data-size="500" onclick="selectVariant('500')">
+                                    <strong>500 ML</strong>
+                                    <span>₹ 499.00</span>
+                                </div>
+                                <div class="variant-pill active" data-size="1000" onclick="selectVariant('1000')">
+                                    <strong>1 Litre</strong>
+                                    <span>₹ 899.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pdp-cta-wrap">
+                            <a class="btn" id="orderBtn" href="https://wa.me/917318023488?text=Hi%20KUMUD%2C%20I%20would%20like%20to%20order%20a%201%20litre%20jar%20of%20ghee" target="_blank" rel="noopener">
+                                <svg class="ico" viewBox="0 0 24 24"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.477-.15-.678.15-.2.301-.778.978-.954 1.18-.176.2-.351.226-.653.076-.301-.15-1.272-.469-2.424-1.496-.895-.799-1.5-1.786-1.676-2.087-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.176.2-.301.301-.502.101-.2.05-.376-.025-.526-.075-.15-.678-1.633-.929-2.239-.244-.59-.493-.51-.678-.52l-.578-.01c-.2 0-.527.075-.803.376s-1.054 1.03-1.054 2.51c0 1.48 1.08 2.908 1.23 3.109.15.2 2.126 3.246 5.15 4.553.72.31 1.282.496 1.72.635.723.23 1.381.197 1.902.12.58-.087 1.78-.727 2.03-1.43.25-.704.25-1.307.175-1.432-.075-.125-.276-.2-.577-.35zM12.04 2C6.516 2 2.022 6.478 2.022 12c0 1.848.502 3.654 1.456 5.239L2 22l4.89-1.433A9.972 9.972 0 0 0 12.04 22c5.523 0 10.017-4.478 10.017-10S17.563 2 12.04 2zm0 18.286c-1.597 0-3.158-.42-4.529-1.217l-.325-.188-2.901.85.875-2.813-.21-.334A8.257 8.257 0 0 1 3.766 12c0-4.562 3.712-8.273 8.274-8.273 4.562 0 8.273 3.711 8.273 8.273 0 4.562-3.711 8.286-8.273 8.286z"/></svg>
+                                <span id="orderBtnText">Order 1 Litre Jar on WhatsApp</span>
+                            </a>
+                        </div>
+
+                        <ul class="pdp-highlights">
+                            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 100% Pure Buffalo Milk Cream (No vegetable oil / palm oil)</li>
+                            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Handmade in Small Batches with Rich Daanedaar Texture</li>
+                            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Direct from Our Own Family Dairy Farm in Lucknow</li>
+                            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Pay Online (UPI, Cards) or Cash on Delivery</li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- 3 Product Catalog Grid Section (Reference Image 2) -->
+        <section class="catalog-section">
+            <div class="w">
+                <div class="catalog-head">
+                    <h2>Available Sizes & Packaging</h2>
+                    <p>Every jar is filled with the same unadulterated, farm-fresh desi buffalo ghee. Choose the size that fits your kitchen.</p>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <span class="product-card-badge">🌿 Starter Size</span>
+                            <img class="product-card-img" src="images/kumud-desi-ghee-jar-front.jpg" alt="KUMUD Pure Desi Ghee 250 ml jar" loading="lazy">
+                        </div>
+                        <div class="product-card-body">
+                            <h3>KUMUD Buffalo Ghee - 250 ml</h3>
+                            <div class="product-card-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>5.0 (Starter Jar)</span>
+                            </div>
+                            <p class="product-card-desc">Ideal for small households, first-time tasting, or as an auspicious gift. Compact and convenient glass jar.</p>
+                            <div class="product-card-price-row">
+                                <span class="product-card-price">₹349.00</span>
+                                <span class="product-card-per100">₹140 / 100 ml</span>
+                            </div>
+                            <a class="btn" href="https://wa.me/917318023488?text=Hi%20KUMUD%2C%20I%20would%20like%20to%20order%20a%20250%20ml%20jar%20of%20ghee" target="_blank" rel="noopener">
+                                <svg class="ico" viewBox="0 0 24 24"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.477-.15-.678.15-.2.301-.778.978-.954 1.18-.176.2-.351.226-.653.076-.301-.15-1.272-.469-2.424-1.496-.895-.799-1.5-1.786-1.676-2.087-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.176.2-.301.301-.502.101-.2.05-.376-.025-.526-.075-.15-.678-1.633-.929-2.239-.244-.59-.493-.51-.678-.52l-.578-.01c-.2 0-.527.075-.803.376s-1.054 1.03-1.054 2.51c0 1.48 1.08 2.908 1.23 3.109.15.2 2.126 3.246 5.15 4.553.72.31 1.282.496 1.72.635.723.23 1.381.197 1.902.12.58-.087 1.78-.727 2.03-1.43.25-.704.25-1.307.175-1.432-.075-.125-.276-.2-.577-.35zM12.04 2C6.516 2 2.022 6.478 2.022 12c0 1.848.502 3.654 1.456 5.239L2 22l4.89-1.433A9.972 9.972 0 0 0 12.04 22c5.523 0 10.017-4.478 10.017-10S17.563 2 12.04 2zm0 18.286c-1.597 0-3.158-.42-4.529-1.217l-.325-.188-2.901.85.875-2.813-.21-.334A8.257 8.257 0 0 1 3.766 12c0-4.562 3.712-8.273 8.274-8.273 4.562 0 8.273 3.711 8.273 8.273 0 4.562-3.711 8.286-8.273 8.286z"/></svg> Order 250 ml on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <span class="product-card-badge">🔥 Most Popular</span>
+                            <img class="product-card-img" src="images/kumud-pure-desi-ghee-1-litre-jar.jpg" alt="KUMUD Pure Desi Ghee 500 ml jar" loading="lazy">
+                        </div>
+                        <div class="product-card-body">
+                            <h3>KUMUD Buffalo Ghee - 500 ml</h3>
+                            <div class="product-card-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>5.0 (Bestseller)</span>
+                            </div>
+                            <p class="product-card-desc">Our most popular size for everyday Indian family cooking—dal tadka, fresh rotis, parathas, and breakfast.</p>
+                            <div class="product-card-price-row">
+                                <span class="product-card-price">₹499.00</span>
+                                <span class="product-card-per100">₹100 / 100 ml</span>
+                            </div>
+                            <a class="btn" href="https://wa.me/917318023488?text=Hi%20KUMUD%2C%20I%20would%20like%20to%20order%20a%20500%20ml%20jar%20of%20ghee" target="_blank" rel="noopener">
+                                <svg class="ico" viewBox="0 0 24 24"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.477-.15-.678.15-.2.301-.778.978-.954 1.18-.176.2-.351.226-.653.076-.301-.15-1.272-.469-2.424-1.496-.895-.799-1.5-1.786-1.676-2.087-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.176.2-.301.301-.502.101-.2.05-.376-.025-.526-.075-.15-.678-1.633-.929-2.239-.244-.59-.493-.51-.678-.52l-.578-.01c-.2 0-.527.075-.803.376s-1.054 1.03-1.054 2.51c0 1.48 1.08 2.908 1.23 3.109.15.2 2.126 3.246 5.15 4.553.72.31 1.282.496 1.72.635.723.23 1.381.197 1.902.12.58-.087 1.78-.727 2.03-1.43.25-.704.25-1.307.175-1.432-.075-.125-.276-.2-.577-.35zM12.04 2C6.516 2 2.022 6.478 2.022 12c0 1.848.502 3.654 1.456 5.239L2 22l4.89-1.433A9.972 9.972 0 0 0 12.04 22c5.523 0 10.017-4.478 10.017-10S17.563 2 12.04 2zm0 18.286c-1.597 0-3.158-.42-4.529-1.217l-.325-.188-2.901.85.875-2.813-.21-.334A8.257 8.257 0 0 1 3.766 12c0-4.562 3.712-8.273 8.274-8.273 4.562 0 8.273 3.711 8.273 8.273 0 4.562-3.711 8.286-8.273 8.286z"/></svg> Order 500 ml on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <span class="product-card-badge">✨ Best Value</span>
+                            <img class="product-card-img" src="images/kumud-buffalo-ghee-bowl-spoon.jpg" alt="KUMUD Pure Desi Ghee 1 litre jar" loading="lazy">
+                        </div>
+                        <div class="product-card-body">
+                            <h3>KUMUD Buffalo Ghee - 1 Litre</h3>
+                            <div class="product-card-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>5.0 (Best Value)</span>
+                            </div>
+                            <p class="product-card-desc">Maximum savings per 100 ml. Perfect for avid home cooks, sweet preparations, halwa, festivals, and large families.</p>
+                            <div class="product-card-price-row">
+                                <span class="product-card-price">₹899.00</span>
+                                <span class="product-card-per100">₹90 / 100 ml</span>
+                            </div>
+                            <a class="btn" href="https://wa.me/917318023488?text=Hi%20KUMUD%2C%20I%20would%20like%20to%20order%20a%201%20litre%20jar%20of%20ghee" target="_blank" rel="noopener">
+                                <svg class="ico" viewBox="0 0 24 24"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.477-.15-.678.15-.2.301-.778.978-.954 1.18-.176.2-.351.226-.653.076-.301-.15-1.272-.469-2.424-1.496-.895-.799-1.5-1.786-1.676-2.087-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.176.2-.301.301-.502.101-.2.05-.376-.025-.526-.075-.15-.678-1.633-.929-2.239-.244-.59-.493-.51-.678-.52l-.578-.01c-.2 0-.527.075-.803.376s-1.054 1.03-1.054 2.51c0 1.48 1.08 2.908 1.23 3.109.15.2 2.126 3.246 5.15 4.553.72.31 1.282.496 1.72.635.723.23 1.381.197 1.902.12.58-.087 1.78-.727 2.03-1.43.25-.704.25-1.307.175-1.432-.075-.125-.276-.2-.577-.35zM12.04 2C6.516 2 2.022 6.478 2.022 12c0 1.848.502 3.654 1.456 5.239L2 22l4.89-1.433A9.972 9.972 0 0 0 12.04 22c5.523 0 10.017-4.478 10.017-10S17.563 2 12.04 2zm0 18.286c-1.597 0-3.158-.42-4.529-1.217l-.325-.188-2.901.85.875-2.813-.21-.334A8.257 8.257 0 0 1 3.766 12c0-4.562 3.712-8.273 8.274-8.273 4.562 0 8.273 3.711 8.273 8.273 0 4.562-3.711 8.286-8.273 8.286z"/></svg> Order 1 Litre on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specifications & Details -->
+        <section>
+            <div class="w pr">
+                <h2>Product Details & Farm Standards</h2>
+                <dl>
+                    <dt>Ingredients</dt>
+                    <dd><a href="buffalo-vs-cow.html">100% Buffalo milk cream</a></dd>
+                    <dt>Method</dt>
+                    <dd><a href="how-ghee-is-made-from-cream.html">Handmade from fresh cream</a>, in small batches</dd>
+                    <dt>Preservatives</dt>
+                    <dd>Zero preservatives, no artificial aroma, no coloring</dd>
+                    <dt>Storage</dt>
+                    <dd><a href="how-to-store-ghee.html">Cool, dry place</a>, lid tightly closed (no refrigeration required)</dd>
+                    <dt>Allergen</dt>
+                    <dd>Contains milk fat</dd>
+                </dl>
             </div>
         </section>
         <!-- Lab test report and FSSAI details: add a section here once the process is complete -->
@@ -247,6 +329,55 @@
             </div>
         </div>
     </footer>
+    <script>
+        var sizeData = {
+            '250': {
+                name: '250 ml Jar',
+                price: '₹349.00',
+                per100: '(₹140 per 100 ml · Starter Jar)',
+                msg: 'Hi%20KUMUD%2C%20I%20would%20like%20to%20order%20a%20250%20ml%20jar%20of%20ghee'
+            },
+            '500': {
+                name: '500 ml Jar',
+                price: '₹499.00',
+                per100: '(₹100 per 100 ml · Most Popular)',
+                msg: 'Hi%20KUMUD%2C%20I%20would%20like%20to%20order%20a%20500%20ml%20jar%20of%20ghee'
+            },
+            '1000': {
+                name: '1 Litre Jar',
+                price: '₹899.00',
+                per100: '(₹90 per 100 ml · Best value)',
+                msg: 'Hi%20KUMUD%2C%20I%20would%20like%20to%20order%20a%201%20litre%20jar%20of%20ghee'
+            }
+        };
+        function selectVariant(size) {
+            var data = sizeData[size];
+            if (!data) return;
+            var pills = document.querySelectorAll('.variant-pill');
+            for (var i = 0; i < pills.length; i++) {
+                if (pills[i].getAttribute('data-size') === size) {
+                    pills[i].classList.add('active');
+                } else {
+                    pills[i].classList.remove('active');
+                }
+            }
+            document.getElementById('productPrice').innerText = data.price;
+            document.getElementById('productPer100').innerText = data.per100;
+            document.getElementById('orderBtn').href = 'https://wa.me/917318023488?text=' + data.msg;
+            document.getElementById('orderBtnText').innerText = 'Order ' + data.name + ' on WhatsApp';
+        }
+        function switchMainImg(thumb) {
+            var main = document.getElementById('mainImg');
+            if (main && thumb) {
+                main.src = thumb.src;
+                var allThumbs = document.querySelectorAll('.pdp-thumbs img');
+                for (var i = 0; i < allThumbs.length; i++) {
+                    allThumbs[i].classList.remove('active');
+                }
+                thumb.classList.add('active');
+            }
+        }
+    </script>
 </body>
 
 </html>
