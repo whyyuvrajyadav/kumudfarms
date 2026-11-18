@@ -187,8 +187,10 @@ Every page shares the unified sticky dark header:
    - 4-column numbered steps with gold counters `content: counter(s); font: 1.8rem var(--serif); color: var(--gold);`.
 4. **FAQ Accordion (`.faq details`):**
    - Clean summary with gold `+` / `–` indicators.
-5. **Customer Reviews Carousel (`.reviews-section`):**
-   - Dark green background `#1F3D2B`, gold quote marks, 5.0 Google Badge, verified customer cards, left/right scroll arrows.
+5. **Customer Reviews Continuous Marquee (`.reviews-section`):**
+   - Dark green background `#1F3D2B`, gold quote marks, 5.0 Google Badge, and continuous infinite auto-scrolling marquee across all devices.
+   - Pauses on desktop hover and mobile touch so customers can read comfortably.
+   - Every review card is clickable and redirects to Google Reviews (`https://review.kumudfarms.in/`) in a new tab.
 
 ---
 
