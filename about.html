@@ -14,9 +14,12 @@
 <meta property="og:image" content="https://www.kumudfarms.in/images/yuvraj-yadav.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
-<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
@@ -42,8 +45,7 @@ header .wrap{display:flex;align-items:center;gap:1.5rem;min-height:68px}
 .logo{display:flex;align-items:center;gap:.6rem;font:1.5rem var(--serif);letter-spacing:.06em;text-decoration:none;margin-right:auto}
 nav{display:flex;gap:1.4rem;font-size:.97rem}nav a{text-decoration:none;opacity:.85}nav a:hover,nav a[aria-current]{opacity:1;color:var(--gold-lt)}
 header .btn{padding:.5rem 1.1rem;font-size:.95rem}
-.hero{background:var(--forest);color:var(--cream)}
-.hero p{font-size:1.15rem;color:#E4E8D8}
+.hero{background:var(--forest);color:var(--cream)}.hero h1{color:var(--cream)}.hero p{font-size:1.15rem;color:#E4E8D8}
 .crumb{font-size:.92rem;color:var(--gold-lt);margin-bottom:1.2rem}.crumb a{text-decoration:none}.crumb a:hover{text-decoration:underline}
 .split{display:grid;grid-template-columns:1fr 1.25fr;gap:3.5rem;align-items:start}
 .arch{border-radius:999px 999px 14px 14px;border:2px solid var(--gold);padding:10px;background:var(--deep)}
@@ -58,7 +60,7 @@ header .btn{padding:.5rem 1.1rem;font-size:.95rem}
 .faq summary{cursor:pointer;font:1.15rem var(--serif);list-style:none;display:flex;justify-content:space-between;gap:1rem}
 .faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";color:var(--gold);font-size:1.5rem;line-height:1}
 .faq details[open] summary:after{content:"–"}.faq details p{margin:.8rem 0 0;color:var(--mute)}
-.cta{background:var(--forest);color:var(--cream);text-align:center}.cta p{margin-inline:auto}
+.cta{background:var(--forest);color:var(--cream);text-align:center}.cta h2{color:var(--cream)}.cta p{margin-inline:auto;color:#E4E8D8}
 footer{background:var(--deep);color:#cfd6c3;padding:3rem 0 6rem;font-size:.97rem}
 footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2rem}
 footer h3{color:var(--gold-lt);font-size:1.05rem}footer a{display:block;text-decoration:none;padding:.15rem 0}footer a:hover{color:var(--gold-lt)}
@@ -133,10 +135,10 @@ footer h3{color:var(--gold-lt);font-size:1.05rem}footer a{display:block;text-dec
 <section class="faq cream">
 <div class="wrap">
 <h2>Questions about KUMUD and its founder</h2>
-<details open><summary>Who founded KUMUD Farms?</summary><p>KUMUD Farms was founded by Yuvraj Yadav in Lucknow, Uttar Pradesh, on his family’s dairy farm legacy.</p></details>
-<details><summary>Where is KUMUD Farms based?</summary><p>We are based in Lucknow, Uttar Pradesh, and we deliver across Lucknow. Message us on WhatsApp for your area.</p></details>
-<details><summary>How is KUMUD ghee made?</summary><p>It is made by hand in small batches from the fresh cream of our own buffalo milk, with no preservatives. <a href="how-ghee-is-made-from-cream.html">Read the full process</a>.</p></details>
-<details><summary>How can I contact Yuvraj Yadav?</summary><p>Message the KUMUD number on WhatsApp at +91 73180 23488, or write to <a href="mailto:info@kumudfarms.in">info@kumudfarms.in</a>.</p></details>
+<details name="kumud-faq" open><summary>Who founded KUMUD Farms?</summary><p>KUMUD Farms was founded by Yuvraj Yadav in Lucknow, Uttar Pradesh, on his family’s dairy farm legacy.</p></details>
+<details name="kumud-faq"><summary>Where is KUMUD Farms based?</summary><p>We are based in Lucknow, Uttar Pradesh, and we deliver across Lucknow. Message us on WhatsApp for your area.</p></details>
+<details name="kumud-faq"><summary>How is KUMUD ghee made?</summary><p>It is made by hand in small batches from the fresh cream of our own buffalo milk, with no preservatives. <a href="how-ghee-is-made-from-cream.html">Read the full process</a>.</p></details>
+<details name="kumud-faq"><summary>How can I contact Yuvraj Yadav?</summary><p>Message the KUMUD number on WhatsApp at +91 73180 23488, or write to <a href="mailto:info@kumudfarms.in">info@kumudfarms.in</a>.</p></details>
 </div>
 </section>
 
@@ -162,5 +164,17 @@ footer h3{color:var(--gold-lt);font-size:1.05rem}footer a{display:block;text-dec
 <a class="wa" href="https://wa.me/917318023488?text=Hi%20KUMUD%2C%20I%20would%20like%20to%20order%20ghee" target="_blank" rel="noopener" aria-label="Order on WhatsApp">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.477-.15-.678.15-.2.301-.778.978-.954 1.18-.176.2-.351.226-.653.076-.301-.15-1.272-.469-2.424-1.496-.895-.799-1.5-1.786-1.676-2.087-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.176.2-.301.301-.502.101-.2.05-.376-.025-.526-.075-.15-.678-1.633-.929-2.239-.244-.59-.493-.51-.678-.52l-.578-.01c-.2 0-.527.075-.803.376s-1.054 1.03-1.054 2.51c0 1.48 1.08 2.908 1.23 3.109.15.2 2.126 3.246 5.15 4.553.72.31 1.282.496 1.72.635.723.23 1.381.197 1.902.12.58-.087 1.78-.727 2.03-1.43.25-.704.25-1.307.175-1.432-.075-.125-.276-.2-.577-.35zM12.04 2C6.516 2 2.022 6.478 2.022 12c0 1.848.502 3.654 1.456 5.239L2 22l4.89-1.433A9.972 9.972 0 0 0 12.04 22c5.523 0 10.017-4.478 10.017-10S17.563 2 12.04 2zm0 18.286c-1.597 0-3.158-.42-4.529-1.217l-.325-.188-2.901.85.875-2.813-.21-.334A8.257 8.257 0 0 1 3.766 12c0-4.562 3.712-8.273 8.274-8.273 4.562 0 8.273 3.711 8.273 8.273 0 4.562-3.711 8.286-8.273 8.286z"/></svg>
 WhatsApp us</a>
+<script>
+document.querySelectorAll('.faq details').forEach(function(detail){
+  detail.addEventListener('toggle',function(){
+    if(this.open){
+      var cur=this;
+      document.querySelectorAll('.faq details').forEach(function(other){
+        if(other!==cur && other.open){other.open=false;}
+      });
+    }
+  });
+});
+</script>
 </body>
 </html>

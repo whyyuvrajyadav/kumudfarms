@@ -62,6 +62,13 @@ footer h3{color:var(--gold-lt);font-size:1.05rem}footer a{display:block;text-dec
 .wa{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0));z-index:30;background:#25D366;color:#073b1a;font-weight:600;padding:.8rem 1.2rem;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.3)}
 @media(max-width:860px){nav{display:none}.split,.why,footer .wrap{grid-template-columns:1fr}.arch{max-width:340px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.menu{display:none;position:relative}.menu summary{list-style:none;cursor:pointer;width:44px;height:44px;display:grid;place-items:center;border-radius:10px;font-size:1.6rem;line-height:1;color:var(--cream)}
+.menu summary::-webkit-details-marker{display:none}.menu summary:after{content:"\2630"}.menu[open] summary:after{content:"\2715";font-size:1.3rem}
+.menu .panel{position:absolute;right:0;top:calc(100% + 10px);width:min(260px,calc(100vw - 2.5rem));background:var(--deep);border:1px solid #2d4a38;border-radius:14px;padding:.5rem;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.menu .panel a{display:block;padding:.75rem 1rem;border-radius:8px;text-decoration:none;color:var(--cream)}.menu .panel a:hover{background:#1d3a29;color:var(--gold-lt)}
+@media(max-width:1000px){nav{display:none}.menu{display:block}}
+@media(max-width:520px){header .wrap{gap:.6rem}header .btn{display:none}}
 </style>
 </head>
 <body>
@@ -70,7 +77,7 @@ footer h3{color:var(--gold-lt);font-size:1.05rem}footer a{display:block;text-dec
 <div class="wrap">
 <a class="logo" href="index.html" aria-label="KUMUD home"><svg width="30" height="30" viewBox="0 0 40 40" fill="#C8A24A" aria-hidden="true"><ellipse cx="20" cy="14" rx="5" ry="11"/><ellipse cx="20" cy="14" rx="5" ry="11" transform="rotate(-38 20 32)"/><ellipse cx="20" cy="14" rx="5" ry="11" transform="rotate(38 20 32)"/><ellipse cx="20" cy="14" rx="5" ry="11" transform="rotate(-72 20 32)" opacity=".6"/><ellipse cx="20" cy="14" rx="5" ry="11" transform="rotate(72 20 32)" opacity=".6"/></svg>KUMUD</a>
 <nav aria-label="Main"><a href="product.html">Products</a><a href="about.html" aria-current="page">Our story</a><a href="blog.html">Journal</a><a href="https://review.kumudfarms.in/">Reviews</a><a href="contact.html">Contact</a></nav>
-<a class="btn gold" href="https://wa.me/917318023488?text=Hi%20KUMUD%2C%20I%20would%20like%20to%20order%20ghee">Order on WhatsApp</a>
+<a class="btn gold" href="https://wa.me/917318023488?text=Hi%20KUMUD%2C%20I%20would%20like%20to%20order%20ghee">Order on WhatsApp</a><details class="menu"><summary aria-label="Menu"></summary><div class="panel"><a href="index.html">Home</a><a href="product.html">Products</a><a href="about.html">Our story</a><a href="blog.html">Journal</a><a href="https://review.kumudfarms.in/">Reviews</a><a href="contact.html">Contact</a></div></details>
 </div>
 </header>
 

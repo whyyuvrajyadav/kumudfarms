@@ -17,9 +17,13 @@
     <meta property="og:image" content="https://www.kumudfarms.in/images/og-kumud.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
-    <link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&family=Young+Serif&display=swap"
@@ -222,79 +226,220 @@
             text-decoration: underline
         }
 
+        .hero h1 {
+            color: var(--cream);
+        }
+
+        .hero p {
+            color: #E4E8D8;
+        }
+
         .start {
             background: var(--cream)
         }
 
-        .start a.card {
+        .featured-card {
             display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 1.5rem;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 2.5rem;
             align-items: center;
-            text-decoration: none;
+            background: #fff;
             border: 2px solid var(--gold);
-            border-radius: 999px 14px 14px 999px;
-            padding: 1.8rem 2.2rem;
-            background: var(--paper)
+            border-radius: 18px;
+            overflow: hidden;
+            text-decoration: none;
+            color: var(--ink);
+            box-shadow: 0 8px 24px rgba(20, 42, 30, 0.08);
+            transition: transform .25s ease, box-shadow .25s ease;
         }
 
-        .start a.card:hover h2 {
+        .featured-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 36px rgba(20, 42, 30, 0.14);
+        }
+
+        .featured-img {
+            aspect-ratio: 16/10;
+            overflow: hidden;
+            background: var(--deep);
+        }
+
+        .featured-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .35s ease;
+        }
+
+        .featured-card:hover .featured-img img {
+            transform: scale(1.05);
+        }
+
+        .featured-body {
+            padding: 2.2rem 2.5rem 2.2rem 0;
+        }
+
+        .featured-body .lbl {
+            font-size: .8rem;
+            font-weight: 600;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin: 0 0 .5rem;
+            display: inline-block;
+        }
+
+        .featured-body h2 {
+            font-size: clamp(1.6rem, 3.2vw, 2.2rem);
             color: var(--forest);
-            text-decoration: underline
+            margin: 0 0 .8rem;
+            line-height: 1.25;
         }
 
-        .start .lbl {
+        .featured-body p {
+            font-size: 1.05rem;
             color: var(--mute);
+            line-height: 1.6;
+            margin: 0 0 1.5rem;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border: 1px solid #e5dcc0;
+            border-radius: 14px;
+            overflow: hidden;
+            text-decoration: none;
+            color: var(--ink);
+            box-shadow: 0 6px 18px rgba(20, 42, 30, 0.05);
+            transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: 0 14px 28px rgba(20, 42, 30, 0.12);
+        }
+
+        .blog-card-img {
+            position: relative;
+            aspect-ratio: 16/10;
+            overflow: hidden;
+            background: var(--deep);
+        }
+
+        .blog-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .35s ease;
+        }
+
+        .blog-card:hover .blog-card-img img {
+            transform: scale(1.05);
+        }
+
+        .blog-card-tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(20, 42, 30, 0.88);
+            color: var(--gold-lt);
+            border: 1px solid rgba(200, 162, 74, 0.4);
+            font-size: .75rem;
+            font-weight: 600;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 999px;
+            backdrop-filter: blur(4px);
+        }
+
+        .blog-card-body {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .blog-card-body h3 {
+            font-family: var(--serif);
+            font-size: 1.22rem;
+            line-height: 1.35;
+            color: var(--forest);
+            margin: 0 0 .6rem;
+        }
+
+        .blog-card:hover .blog-card-body h3 {
+            color: #142A1E;
+        }
+
+        .blog-card-body p {
             font-size: .95rem;
-            margin: 0 0 .3em
+            color: var(--mute);
+            line-height: 1.55;
+            margin: 0 0 1.2rem;
+            flex: 1;
         }
 
-        .start h2 {
-            margin: 0 0 .3em
-        }
-
-        .start p {
-            margin: 0
-        }
-
-        .go {
+        .blog-card-link {
+            font-size: .92rem;
             font-weight: 600;
             color: var(--forest);
-            white-space: nowrap
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-top: auto;
+            transition: gap .2s ease, color .2s ease;
+        }
+
+        .blog-card:hover .blog-card-link {
+            color: var(--gold);
+            gap: 8px;
+        }
+
+        .grp {
+            padding-top: 1rem;
         }
 
         .grp h2 {
-            margin-bottom: 1rem
-        }
-
-        .post {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: .3rem 2rem;
-            align-items: center;
-            padding: 1.2rem 0;
-            border-top: 1px solid #d9d0b4;
-            text-decoration: none
-        }
-
-        .grp .post:last-of-type {
-            border-bottom: 1px solid #d9d0b4
-        }
-
-        .post:hover h3 {
+            font-size: clamp(1.5rem, 3.2vw, 2rem);
             color: var(--forest);
-            text-decoration: underline
+            margin-bottom: 1.4rem;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: .6rem;
+            display: inline-block;
         }
 
-        .post p {
-            margin: 0;
-            color: var(--mute)
+        @media(max-width: 900px) {
+            .featured-card {
+                grid-template-columns: 1fr;
+            }
+            .featured-body {
+                padding: 1.8rem;
+            }
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
         }
 
         .cta {
             background: var(--forest);
             color: var(--cream);
             text-align: center
+        }
+
+        .cta h2 {
+            color: var(--cream);
         }
 
         .cta p {
@@ -418,74 +563,96 @@
 
         <section class="start">
             <div class="wrap">
-                <a class="card" href="cream-vs-bilona.html">
-                    <div>
-                        <p class="lbl">Start here</p>
-                        <h2>Cream-based vs bilona ghee</h2>
-                        <p>Two ways to make ghee, and why we use the cream-based method.</p>
+                <a class="featured-card" href="cream-vs-bilona.html">
+                    <div class="featured-img">
+                        <img src="images/blog/cream-vs-bilona.jpg" alt="Cream-based vs bilona ghee making" width="700" height="440" loading="eager">
                     </div>
-                    <span class="go">Read article</span>
+                    <div class="featured-body">
+                        <span class="lbl">★ Featured Article · Start Here</span>
+                        <h2>Cream-based vs bilona ghee</h2>
+                        <p>Two distinct ways to make ghee, and why we are completely transparent about making our ghee from fresh dairy cream.</p>
+                        <span class="btn gold">Read full guide &rarr;</span>
+                    </div>
                 </a>
             </div>
         </section>
 
         <section class="grp">
             <div class="wrap">
-                <h2>Buying guides</h2>
-                <a class="post" href="buy-desi-ghee-in-lucknow.html">
-                    <div>
-                        <h3>How to buy pure desi ghee in Lucknow</h3>
-                        <p>What to look for before you choose a jar.</p>
-                    </div><span class="go">Read</span>
-                </a>
-                <a class="post" href="ghee-price-in-lucknow.html">
-                    <div>
-                        <h3>Ghee price in Lucknow</h3>
-                        <p>What desi ghee costs and how to compare sizes.</p>
-                    </div><span class="go">Read</span>
-                </a>
-                <a class="post" href="buffalo-vs-cow.html">
-                    <div>
-                        <h3>Buffalo ghee vs cow ghee</h3>
-                        <p>The two compared, and how to choose between them.</p>
-                    </div><span class="go">Read</span>
-                </a>
-            </div>
-        </section>
+                <h2>All Farm & Cooking Guides</h2>
+                <div class="blog-grid">
+                    <a class="blog-card" href="buy-desi-ghee-in-lucknow.html">
+                        <div class="blog-card-img">
+                            <img src="images/blog/buy-desi-ghee-in-lucknow.jpg" alt="How to buy pure desi ghee in Lucknow" width="600" height="375" loading="lazy">
+                            <span class="blog-card-tag">Buying Guide</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <h3>How to buy pure desi ghee in Lucknow</h3>
+                            <p>What to look for before choosing a jar: daanedaar texture, fresh aroma, and buying direct from farm families.</p>
+                            <span class="blog-card-link">Read guide &rarr;</span>
+                        </div>
+                    </a>
 
-        <section class="grp">
-            <div class="wrap">
-                <h2>How ghee is made</h2>
-                <a class="post" href="how-ghee-is-made-from-cream.html">
-                    <div>
-                        <h3>How ghee is made from fresh buffalo cream</h3>
-                        <p>The process behind every KUMUD jar, from farm milk to numbered batch.</p>
-                    </div><span class="go">Read</span>
-                </a>
-                <a class="post" href="cream-vs-bilona.html">
-                    <div>
-                        <h3>Cream-based vs bilona ghee</h3>
-                        <p>Two methods, and why we are open about which one we use.</p>
-                    </div><span class="go">Read</span>
-                </a>
-            </div>
-        </section>
+                    <a class="blog-card" href="ghee-price-in-lucknow.html">
+                        <div class="blog-card-img">
+                            <img src="images/blog/ghee-price-in-lucknow.jpg" alt="Ghee price in Lucknow comparison" width="600" height="375" loading="lazy">
+                            <span class="blog-card-tag">Price Guide</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <h3>Ghee price in Lucknow</h3>
+                            <p>What authentic desi ghee really costs, comparing sizes from 250ml to 1L, and why quality has a fair price.</p>
+                            <span class="blog-card-link">Read guide &rarr;</span>
+                        </div>
+                    </a>
 
-        <section class="grp">
-            <div class="wrap">
-                <h2>In your kitchen</h2>
-                <a class="post" href="ways-to-use-desi-ghee.html">
-                    <div>
-                        <h3>7 ways to use desi ghee in everyday cooking</h3>
-                        <p>Simple ideas for rotis, dal, sweets and more.</p>
-                    </div><span class="go">Read</span>
-                </a>
-                <a class="post" href="how-to-store-ghee.html">
-                    <div>
-                        <h3>How to store ghee</h3>
-                        <p>Keep your jar fresh from the first spoon to the last.</p>
-                    </div><span class="go">Read</span>
-                </a>
+                    <a class="blog-card" href="buffalo-vs-cow.html">
+                        <div class="blog-card-img">
+                            <img src="images/blog/buffalo-vs-cow.jpg" alt="Buffalo ghee vs cow ghee dairy farm" width="600" height="375" loading="lazy">
+                            <span class="blog-card-tag">Dairy Guide</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <h3>Buffalo ghee vs cow ghee: how to choose</h3>
+                            <p>The two traditional varieties compared: fat content, grain texture, smoking point, and which one fits your cooking.</p>
+                            <span class="blog-card-link">Read guide &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a class="blog-card" href="how-ghee-is-made-from-cream.html">
+                        <div class="blog-card-img">
+                            <img src="images/blog/how-ghee-is-made-from-cream.jpg" alt="How ghee is made from fresh buffalo cream" width="600" height="375" loading="lazy">
+                            <span class="blog-card-tag">Process</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <h3>How ghee is made from fresh buffalo cream</h3>
+                            <p>The step-by-step process behind every numbered jar of KUMUD ghee, from morning farm milk to slow simmering.</p>
+                            <span class="blog-card-link">Read guide &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a class="blog-card" href="ways-to-use-desi-ghee.html">
+                        <div class="blog-card-img">
+                            <img src="images/blog/ways-to-use-desi-ghee.jpg" alt="7 ways to use desi ghee in everyday cooking" width="600" height="375" loading="lazy">
+                            <span class="blog-card-tag">In Your Kitchen</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <h3>7 ways to use desi ghee in everyday cooking</h3>
+                            <p>Simple delicious ideas for hot rotis, steaming dal tadka, traditional halwa, parathas, and golden milk.</p>
+                            <span class="blog-card-link">Read guide &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a class="blog-card" href="how-to-store-ghee.html">
+                        <div class="blog-card-img">
+                            <img src="images/blog/how-to-store-ghee.jpg" alt="How to store ghee in pantry" width="600" height="375" loading="lazy">
+                            <span class="blog-card-tag">Storage</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <h3>How to store ghee</h3>
+                            <p>Simple rules to keep your ghee fresh, aromatic and granular from the first spoonful to the very last.</p>
+                            <span class="blog-card-link">Read guide &rarr;</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
 

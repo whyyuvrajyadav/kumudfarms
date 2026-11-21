@@ -14,9 +14,12 @@
 <meta property="og:image" content="https://www.kumudfarms.in/images/og-kumud.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
-<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
@@ -72,7 +75,7 @@ header .btn{padding:.5rem 1.1rem;font-size:.95rem}
 .faq summary{cursor:pointer;font:1.15rem var(--serif);list-style:none;display:flex;justify-content:space-between;gap:1rem}
 .faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";color:var(--gold);font-size:1.5rem;line-height:1}
 .faq details[open] summary:after{content:"–"}.faq details p{margin:.8rem 0 0;color:var(--mute)}
-.cta{background:var(--forest);color:var(--cream);text-align:center}.cta p{margin-inline:auto}
+.cta{background:var(--forest);color:var(--cream);text-align:center}.cta h2{color:var(--cream)}.cta p{margin-inline:auto;color:#E4E8D8}
 footer{background:var(--deep);color:#cfd6c3;padding:3rem 0 6rem;font-size:.97rem}
 footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2rem}
 footer h3{color:var(--gold-lt);font-size:1.05rem}footer a{display:block;text-decoration:none;padding:.15rem 0}footer a:hover{color:var(--gold-lt)}
@@ -206,10 +209,10 @@ footer h3{color:var(--gold-lt);font-size:1.05rem}footer a{display:block;text-dec
 <section class="faq">
 <div class="wrap">
 <h2>Common questions</h2>
-<details open><summary>How do I order?</summary><p>Choose a size and quantity above and tap Order on WhatsApp. Your message is written for you, and we confirm stock and delivery.</p></details>
-<details><summary>Where do you deliver?</summary><p>We deliver across Lucknow. Share your area on WhatsApp and we will confirm.</p></details>
-<details><summary>Is it cream-based or bilona ghee?</summary><p>It is cream-based. <a href="cream-vs-bilona.html">Here is the difference</a>.</p></details>
-<details><summary>Does it have preservatives?</summary><p>No. It is ghee made from buffalo cream, with nothing added.</p></details>
+<details name="kumud-faq" open><summary>How do I order?</summary><p>Choose a size and quantity above and tap Order on WhatsApp. Your message is written for you, and we confirm stock and delivery.</p></details>
+<details name="kumud-faq"><summary>Where do you deliver?</summary><p>We deliver across Lucknow. Share your area on WhatsApp and we will confirm.</p></details>
+<details name="kumud-faq"><summary>Is it cream-based or bilona ghee?</summary><p>It is cream-based. <a href="cream-vs-bilona.html">Here is the difference</a>.</p></details>
+<details name="kumud-faq"><summary>Does it have preservatives?</summary><p>No. It is ghee made from buffalo cream, with nothing added.</p></details>
 </div>
 </section>
 
@@ -246,6 +249,16 @@ $('order').href='https://wa.me/917318023488?text='+encodeURIComponent('Hi KUMUD,
 document.querySelectorAll('input[name=size]').forEach(function(r){r.addEventListener('change',upd)});
 $('minus').onclick=function(){if(q>1){q--;upd()}};
 $('plus').onclick=function(){if(q<10){q++;upd()}};
+document.querySelectorAll('.faq details').forEach(function(detail){
+  detail.addEventListener('toggle',function(){
+    if(this.open){
+      var cur=this;
+      document.querySelectorAll('.faq details').forEach(function(other){
+        if(other!==cur && other.open){other.open=false;}
+      });
+    }
+  });
+});
 })();
 </script>
 </body>
